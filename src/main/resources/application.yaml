@@ -1,0 +1,10 @@
+server:
+  servlet:
+    context-path: /my-retail/products
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: my_retail
