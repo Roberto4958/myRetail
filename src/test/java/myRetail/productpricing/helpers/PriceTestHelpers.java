@@ -4,6 +4,9 @@ import myRetail.productpricing.models.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class PriceTestHelpers {
 
     public static ProductResponse getProductResponse() {
@@ -51,8 +54,24 @@ public class PriceTestHelpers {
         Price price = new Price();
         price.setProductId(3453344);
         price.setValue(34.23);
-        price.setCurrencyCode("Bitcoin");
+        price.setCurrencyCode("BITCOIN");
         return price;
+    }
+
+
+    public static List<Price> getPrices() {
+        Price price1 = new Price();
+        price1.setId("9872934");
+        price1.setProductId(9287397);
+        price1.setValue(43.34);
+        price1.setCurrencyCode("USD");
+
+        Price price2 = new Price();
+        price2.setId("7987223");
+        price2.setProductId(9287397);
+        price2.setValue(0.043);
+        price2.setCurrencyCode("BITCOIN");
+        return Arrays.asList(new Price[]{price1, price2});
     }
 
 
